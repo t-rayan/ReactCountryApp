@@ -1,0 +1,29 @@
+.countryCard {
+  width: 14rem;
+  min-height: 300px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+@media only screen and (max-width: 768px) {
+  .countryCard {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .countryCard {
+    width: 100%;
+  }
+}
+
+.countryInfo {
+  padding: 1rem ;
+}
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+.population, .region, .capital {
+  font-size: .9rem;
+  margin-bottom: .2rem;
+}

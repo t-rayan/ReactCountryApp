@@ -1,0 +1,35 @@
+
+.ddownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 210px;
+  padding: .8rem;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  position: inherit;
+  cursor: pointer;
+}
+.dText {
+  font-size: .8rem;
+  padding-right: .9rem;
+}
+.dIcon {
+  color: #000;
+  cursor: pointer;
+}
+.dropMenu {
+  position: absolute;
+  top: 3rem;
+  width: 115px;
+  padding: 1rem;
+  z-index: 1111;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+}
+.dropMenu p {
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+  cursor: pointer;
+}

@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CountryState from "./context/CountryContext/CountryState";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import "./App.css";
+import HomeScreen from "./screens/HomeScreen";
+import CountryDetailsScreen from "./screens/CountryDetailsScreen";
+import Navbar from "./components/Navbar/Navbar";
+import ThemeState from "./context/ThemeContext/ThemeState";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CountryState>
+      <ThemeState>
+        <Router>
+          <div className="App">
+            <Navbar />
+            <Switch>
+              <Route path="/" exact component={HomeScreen} />
+              <Route path="/:cname" exact component={CountryDetailsScreen} />
+            </Switch>
+          </div>
+        </Router>
+      </ThemeState>
+    </CountryState>
   );
 }
 

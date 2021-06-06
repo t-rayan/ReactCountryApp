@@ -1,0 +1,23 @@
+nav {
+  color: var(--very-dark-blue-light);
+  height: 3.5rem;
+  display: flex;
+  padding: 0 3rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  
+}
+@media only screen and (max-width: 600px) {
+  nav {
+   padding: 0 1rem;
+   
+  }
+}
+@media only screen and (max-width: 600px) {
+  .appTitle {
+  font-size: 1.2rem;
+   
+  }
+}
+
