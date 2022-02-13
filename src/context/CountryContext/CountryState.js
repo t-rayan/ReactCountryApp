@@ -32,13 +32,20 @@ function CountryState({ children }) {
 
   const [state, dispatch] = useReducer(countryReducer, initialState);
 
+  const header= {
+    'Access-Control-Allow-Origin' : '*',
+  }
+
   // fetching all countries
   const fetchAllCountries = async () => {
     dispatch({
       type: LOAD_COUNTRY_REQUEST,
     });
     try {
-      const res = await Axios.get(`${baseUrl}/all`);
+      const res = await Axios.get(`${baseUrl}/all`, {headers:{
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      }} );
       dispatch({
         type: LOAD_COUNTRY_SUCCESS,
         payload: res?.data,
